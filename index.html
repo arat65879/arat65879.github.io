@@ -6,10 +6,51 @@
   <title>Betcio Musteri Temsilcileri</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <meta name="theme-color" content="#070b12" />
+  <style>
+    @keyframes betcioRain {
+      from {
+        transform: translate3d(0, -50%, 0);
+      }
+      to {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .betcio-rain {
+      animation: betcioRain 22s linear infinite;
+      text-shadow: 0 0 18px rgba(245, 196, 0, 0.22);
+    }
+
+    .betcio-rain-slow {
+      animation-duration: 30s;
+    }
+
+    .betcio-rain-fast {
+      animation-duration: 17s;
+    }
+  </style>
 </head>
 
 <body class="min-h-screen bg-[#070b12] text-white antialiased">
-  <main class="min-h-screen bg-[radial-gradient(circle_at_top,#2a2410_0,#070b12_46%,#030506_100%)] px-4 py-6 sm:px-6">
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 overflow-hidden bg-[radial-gradient(circle_at_top,#2a2410_0,#070b12_46%,#030506_100%)]">
+    <div class="absolute inset-0 opacity-[0.13]">
+      <div class="betcio-rain absolute -top-full left-[-18%] flex h-[200%] flex-col gap-8 text-5xl font-black uppercase tracking-[0.22em] text-[#f5c400] rotate-[-16deg]">
+        <span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span>
+        <span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span>
+      </div>
+      <div class="betcio-rain betcio-rain-slow absolute -top-full left-[30%] flex h-[200%] flex-col gap-10 text-6xl font-black uppercase tracking-[0.18em] text-white rotate-[-16deg]">
+        <span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span>
+        <span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span>
+      </div>
+      <div class="betcio-rain betcio-rain-fast absolute -top-full right-[-30%] flex h-[200%] flex-col gap-7 text-5xl font-black uppercase tracking-[0.24em] text-[#f5c400] rotate-[-16deg]">
+        <span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span>
+        <span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span><span>BETCİO</span>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-[#070b12]/55"></div>
+  </div>
+
+  <main class="relative z-10 min-h-screen px-4 py-6 sm:px-6">
     <section class="mx-auto flex min-h-[calc(100vh-48px)] w-full max-w-lg flex-col justify-center">
       <div class="mb-6 text-center">
         <div class="mx-auto mb-4 flex h-20 w-64 max-w-full items-center justify-center overflow-hidden rounded-3xl border-2 border-[#f5c400] bg-[#080c14] shadow-2xl shadow-yellow-950/40">
